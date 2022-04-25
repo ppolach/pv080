@@ -4,7 +4,6 @@
 import base64
 import cPickle
 import subprocess
-import subprocess
 import flask
 
 # Input injection
@@ -15,7 +14,7 @@ def transcode_file(request, filename):
 
 
 # Assert statements
-def assertstat(request, user):
+def assertstat(user):
     """text"""
     assert user.is_admin, 'user does not have access'
     # secure code...
